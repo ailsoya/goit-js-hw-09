@@ -1,1 +1,1 @@
-const flatpickr = require("flatpickr")
+const datePick = document.querySelector("#datetime-picker")
