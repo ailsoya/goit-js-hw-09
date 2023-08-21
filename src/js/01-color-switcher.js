@@ -10,7 +10,7 @@ function changingColors() {
     backround.style.backgroundColor = getRandomHexColor()
     startButton.disabled = true
     stopButton.disabled = false
-    timerId = setInterval(() => {
+    let timerId = setInterval(() => {
         backround.style.backgroundColor = getRandomHexColor()
     }, 1000)
 
