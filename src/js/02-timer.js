@@ -62,3 +62,17 @@ const userTime = flatpickr(datePick, {
         }
     },
 })
+
+const timerr = document.querySelector(".timer")
+const options = Array.from(document.querySelectorAll(".field"))
+const values = Array.from(document.querySelectorAll(".value"))
+
+timerr.setAttribute('style', 'display: flex; margin-top: 18px')
+
+options.forEach(function (option) {
+    option.setAttribute('style', 'display: flex; flex-direction: column; padding-right: 12px; text-transform: uppercase; justify-content: center; font-size: 13px; font-weight: 500')
+})
+
+values.forEach(function (value) {
+    value.setAttribute('style', 'text-align: center; font-size: 27px;')
+});
