@@ -43,6 +43,8 @@ const userTime = flatpickr(datePick, {
         } else {
             startBtn.disabled = false
             startBtn.addEventListener('click', () => {
+                startBtn.disabled = true
+                datePick.disabled = true
                 const timerId = setInterval(() => {
                     let nowTime = new Date()
                     let ms = selectedDates[0].getTime() - nowTime.getTime()
@@ -56,6 +58,8 @@ const userTime = flatpickr(datePick, {
                         clearInterval(timerId)
                         hoursTimer.textContent = '00'
                         minutesTimer.textContent = '00'
+                        startBtn.disabled = false
+                        datePick.disabled = false
                     }
                 }, 1000)
             })
